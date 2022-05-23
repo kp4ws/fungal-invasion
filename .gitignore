@@ -9,7 +9,10 @@ untitled-project2D/[Bb]uild/
 untitled-project2D/[Bb]uilds/
 untitled-project2D/[Ll]ogs/
 untitled-project2D/[Mm]emoryCaptures/
+
+# Third party packages/assets that shouldn't be inluded
 untitled-project2D/[Aa]ssets/Asset Packs/
+untitled-project2D/[Aa]ssets/Asset Packs.meta
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !untitled-project2D/[Aa]ssets/**/*.meta

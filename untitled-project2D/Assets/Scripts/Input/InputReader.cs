@@ -9,6 +9,7 @@ namespace Kp4wsGames.Input
         public Vector2 MovementValue { get; private set; }
         public event Action JumpEvent;
         public event Action PickupEvent;
+        public event Action ShootEvent;
 
         private Controls controls;
 
@@ -27,6 +28,14 @@ namespace Kp4wsGames.Input
         public void OnMove(InputAction.CallbackContext context)
         {
             MovementValue = context.ReadValue<Vector2>();
+        }
+
+        public void OnShoot(InputAction.CallbackContext context)
+        {
+            if (context.started || context.canceled)
+            {
+                ShootEvent?.Invoke();
+            }
         }
     }
 }
