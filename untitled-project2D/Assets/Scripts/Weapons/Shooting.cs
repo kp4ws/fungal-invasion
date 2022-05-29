@@ -9,7 +9,7 @@ namespace Kp4wsGames.Player
         [SerializeField] private Transform firePoint;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletForce = 20f; 
-        [SerializeField] private float fireRate = 0.2f;
+        [SerializeField] private float fireRate = 0.1f;
         [SerializeField] private float destroyDelay = 3f;
         
         private Coroutine shootRoutine;

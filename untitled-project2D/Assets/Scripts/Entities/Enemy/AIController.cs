@@ -6,6 +6,12 @@ namespace Kp4wsGames.Entities.Enemy
 	public class AIController : MonoBehaviour
 	{
         [SerializeField] private Transform target;
+        [SerializeField] private float moveSpeed = 6f;
+
+        public void SetSpeed(float speed)
+        {
+            moveSpeed = speed;
+        }
 
         private void Start()
         {
@@ -14,8 +20,17 @@ namespace Kp4wsGames.Entities.Enemy
 
         private void Update()
         {
-            float step = 5f * Time.deltaTime;
+            float step = moveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag != "Player")
+                return;
+
+            //TODO hit event
+            Destroy(gameObject);
         }
     }
 }

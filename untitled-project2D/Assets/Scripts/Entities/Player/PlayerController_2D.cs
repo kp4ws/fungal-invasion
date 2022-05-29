@@ -27,6 +27,7 @@ namespace Kp4wsGames.Player
         private void Start()
         {
             MainCameraTransform = Camera.main;
+            SpawnPlayer(); 
         }
 
         private void Update()
@@ -38,6 +39,26 @@ namespace Kp4wsGames.Player
         private void FixedUpdate()
         {
             Move();
+        }
+
+        private void SpawnPlayer()
+        {
+            //TODO make these calculations dynamic
+            //const float PPU = 67.5f;
+            //const float levelSize = 99; //0 - 99 = 100
+            //const float resX = 1920;
+            //const float resY = 1080;
+
+            //float minX = 0;
+            //float maxX = (resX / PPU) * (levelSize + 1);
+            //float minY = 0;
+            //float maxY = (resY / PPU) * (levelSize + 1);
+
+            float x = Random.Range(2, 98);
+            float y = Random.Range(2, 98);
+
+            Vector2 spawnPosition = new Vector2(x, y);
+            RigidBody.position = spawnPosition;
         }
 
         private void PhysicsCheck()

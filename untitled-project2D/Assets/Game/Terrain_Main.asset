@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8024b0793b0af0b46827a64674178167, type: 3}
+  m_Name: Terrain_Main
+  m_EditorClassIdentifier: 
+  <Width>k__BackingField: 100
+  <Height>k__BackingField: 100
+  <Offset>k__BackingField: {x: 0, y: 0, z: 0}
+  <Seed>k__BackingField: 
+  <Scale>k__BackingField: 2
+  <Octaves>k__BackingField: 8
+  <Lacunarity>k__BackingField: 2
+  <Persistence>k__BackingField: 0.5
+  <Tiles>k__BackingField:
+  - <Name>k__BackingField: Plain
+    <Height>k__BackingField: 0.5
+    <Tile>k__BackingField: {fileID: 11400000, guid: 507aad2a4f868b242b98227235f16430, type: 2}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <Name>k__BackingField: Grass
+    <Height>k__BackingField: 0.7
+    <Tile>k__BackingField: {fileID: 11400000, guid: c87651dfd06deea439d7567ecf6cda80, type: 2}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <Name>k__BackingField: Shrub
+    <Height>k__BackingField: 0.8
+    <Tile>k__BackingField: {fileID: 11400000, guid: 5008c2f4e22044340a2eb2cc4b99f6a0, type: 2}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <Name>k__BackingField: Shrub Test
+    <Height>k__BackingField: 0.9
+    <Tile>k__BackingField: {fileID: 11400000, guid: 5008c2f4e22044340a2eb2cc4b99f6a0, type: 2}
+    <Color>k__BackingField: {r: 0.82431936, g: 0.8490566, b: 0.22828408, a: 0}

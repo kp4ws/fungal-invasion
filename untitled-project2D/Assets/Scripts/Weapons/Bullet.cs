@@ -7,6 +7,10 @@ namespace Kp4wsGames.Default
     {
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            //TODO have a range of things not to hit
+            if (collision.gameObject.tag == "Player")
+                return;
+
             Destroy(gameObject);
 
             Health targetHealth = collision.gameObject.GetComponent<Health>();

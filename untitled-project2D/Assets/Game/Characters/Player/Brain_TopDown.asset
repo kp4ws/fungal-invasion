@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31c5586d5b156b4aa9c72b34e7b5628, type: 3}
   m_Name: Brain_TopDown
   m_EditorClassIdentifier: 
-  <MoveSpeed>k__BackingField: 10
+  <MoveSpeed>k__BackingField: 7
   <RunSpeed>k__BackingField: 0
   <JumpHeight>k__BackingField: 0
   <GravityValue>k__BackingField: 0

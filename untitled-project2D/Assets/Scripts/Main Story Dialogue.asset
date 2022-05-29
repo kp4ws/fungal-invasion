@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cac9411fb974b74d8a68d08687665aa, type: 3}
+  m_Name: Main Story Dialogue
+  m_EditorClassIdentifier: 
+  storyText: "In the year 3012, our planet started running out of vital resources
+    needed to sustain human life. In order to rise up against the decline, scientists
+    from around the world gathered together to find a solution. A project named FG201
+    was started...\r\n\r\nFG201\u2019s purpose was to extract precious resources
+    from dying vegetation, mold, and other fungal matter in order to create a renewable
+    energy source. \r\n\r\nLittle do we know at the time that Death Is Only The Beginning...\r\n\r\nAs
+    though without warning, FG201 began mutating out of control. Containment facilities
+    will setup in order to stop the spread but were unsuccessful.\r\n\r\nAs a last
+    effort, mechanical machines were created to save the human race and eradicate
+    the Fungal Invasion..."
