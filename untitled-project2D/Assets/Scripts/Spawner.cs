@@ -14,13 +14,20 @@ namespace Kp4wsGames.Default
 
         PlayerController_2D player;
 
+        Coroutine spawn;
+
         private void Start()
         {
             player = FindObjectOfType<PlayerController_2D>();//TODO
             if (player == null)
                 return;
 
-            StartCoroutine(SpawnEnemiesContinously());
+            spawn = StartCoroutine(SpawnEnemiesContinously());
+        }
+
+        public void Stop()
+        {
+            StopCoroutine(spawn);
         }
 
         private IEnumerator SpawnEnemiesContinously()

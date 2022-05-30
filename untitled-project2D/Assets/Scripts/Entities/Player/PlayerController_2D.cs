@@ -1,6 +1,8 @@
 using UnityEngine;
 using Kp4wsGames.Input;
 using UnityEngine.InputSystem;
+using Kp4wsGames.Attributes;
+using TMPro;
 
 namespace Kp4wsGames.Player
 {
@@ -11,6 +13,11 @@ namespace Kp4wsGames.Player
         [field: SerializeField] public Rigidbody2D RigidBody { get; private set; }
         [field: SerializeField] public PlayerBrain Modifiers { get; private set; }
         [field: SerializeField] public Animator Animator { get; private set; }
+
+        [SerializeField] private TextMeshProUGUI healthText;
+        [SerializeField] private TextMeshProUGUI scoreText;
+
+        private int score = 0;
 
         public Camera MainCameraTransform { get; private set; }
 
@@ -27,6 +34,8 @@ namespace Kp4wsGames.Player
         private void Start()
         {
             MainCameraTransform = Camera.main;
+            healthText.text = "Health: " + GetComponent<Health>().getHealth();
+            scoreText.text = "Score: " + score;
             SpawnPlayer(); 
         }
 
@@ -73,6 +82,19 @@ namespace Kp4wsGames.Player
             Vector2 lookDir = targetPosition - RigidBody.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Typically have to set this to -90 degress if player is pointing that way
             RigidBody.rotation = angle;
+        }
+
+        public void OnHit()
+        {
+            var health = GetComponent<Health>();
+            health.TakeDamage(null, 10);//TODO dynamic damage amount
+            healthText.text = "Health: " + health.getHealth();
+        }
+
+        public void OnEnemyDestroyed(int points)
+        {
+            score += points;
+            scoreText.text = "Score: " + score;
         }
     }
 }

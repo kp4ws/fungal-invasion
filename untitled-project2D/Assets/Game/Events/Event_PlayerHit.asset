@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15fef5679297e64d8d22d125e67be95, type: 3}
-  m_Name: SampleEvent
+  m_Name: Event_PlayerHit
   m_EditorClassIdentifier: 

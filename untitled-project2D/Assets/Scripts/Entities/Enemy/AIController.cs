@@ -1,3 +1,4 @@
+using Kp4wsGames.EventManagement;
 using Kp4wsGames.Player;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ namespace Kp4wsGames.Entities.Enemy
 	{
         [SerializeField] private Transform target;
         [SerializeField] private float moveSpeed = 6f;
+
+        [SerializeField] private GameEvent Event;
+
 
         public void SetSpeed(float speed)
         {
@@ -29,7 +33,7 @@ namespace Kp4wsGames.Entities.Enemy
             if (collision.gameObject.tag != "Player")
                 return;
 
-            //TODO hit event
+            Event.Raise();
             Destroy(gameObject);
         }
     }

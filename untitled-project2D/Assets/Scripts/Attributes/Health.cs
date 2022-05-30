@@ -1,3 +1,4 @@
+using Kp4wsGames.EventManagement;
 using UnityEngine;
 
 namespace Kp4wsGames.Attributes
@@ -5,6 +6,8 @@ namespace Kp4wsGames.Attributes
     public class Health : MonoBehaviour
     {
         [SerializeField] private float healthPoints = 100f; //TODO
+        [SerializeField] GameEvent GameoverEvent;
+        [SerializeField] GameEvent EnemyDestroyedEvent;
         private bool isDead;
 
         public void TakeDamage(GameObject sender, float damage)
@@ -26,6 +29,11 @@ namespace Kp4wsGames.Attributes
             return isDead;
         }
 
+        public float getHealth()
+        {
+            return healthPoints;
+        }
+
         private void Die()
         {
             if (isDead)
@@ -33,7 +41,15 @@ namespace Kp4wsGames.Attributes
 
             isDead = true;
             Destroy(gameObject); //TODO
-            //TODO Invoke UnityEvent?
+
+            if(gameObject.tag == "Player")
+            {
+                GameoverEvent.Raise();
+            }
+            else
+            {
+                EnemyDestroyedEvent.Raise();
+            }
         }
     }
 }
