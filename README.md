@@ -29,6 +29,9 @@ Fight off the Fungal Invasion! Play in a topdown world as a mech and survive aga
 - Particle/Explosion FX
 - Expand upon my procedural tilemap system.
 
+### Project Image
+![image](https://github.com/kp4ws/fungal-invasion/assets/58745400/c7a0e189-a997-4a92-ba1e-dcb922c833d9)
+
 
 ### Contributers/Credits
 #### Tilemap sprites
